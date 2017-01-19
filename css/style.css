@@ -1,0 +1,211 @@
+body {
+	font-size: 12px;
+}
+
+
+.wrapper {
+	width: 100%;
+	max-width: 1170px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+.row {
+	max-width: 1128px;
+}
+.header {
+	width: 100%;
+	background: #CDE0F1;
+	border:1px solid #4D5357;
+}
+
+.headerText {
+	padding: 15px;
+
+}
+
+.headerText p {
+	margin-bottom: 0px;
+	font-size: 1.3rem;
+}
+
+.headerText h2 {
+	font-size: 1.6rem;
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+.headerText p:nth-child(2) {
+	margin-bottom: 20px;
+}
+
+.headerName {
+	text-align: center;
+	text-transform: uppercase;
+	color: #C56DCE;
+	background: #E6B8AF;
+	margin-top: 15px;
+	max-width: 730px;
+}
+
+.headerName h1 {
+	padding-bottom: 10px;
+}
+
+.content {
+	border:1px solid #4D5357;
+	margin-top: 30px;
+	padding: 20px;
+	float: right;
+	height: 450px;
+	position: relative;
+}
+
+.content h2 {
+	font-size: 1.6rem;
+	margin:0px;
+	padding-bottom: 5px;
+
+}
+
+.content span {
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.tab {
+	position: absolute;
+	top:-5.5%;
+	left: 0%;
+	text-align: center;
+	
+}
+
+.tab h2 {
+	font-weight:700;
+}
+
+.tabLeft {
+	border:1px solid #4D5357;
+}
+
+.tabRight {
+	border:1px solid #4D5357;
+}
+
+.aside {
+	border:1px solid #4D5357;
+	background: #CDE0F1;
+	float: left;
+	padding:10px;
+	margin-top:30px;
+	width:32.33333333%;
+	height:570px; 
+}
+
+.asideTab {
+	padding: 10px;
+}
+
+.asideTab h2 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: 0px;
+	padding: 0px;
+}
+
+.asideText {
+	border:1px solid #4D5357;
+	background: #EDEDED;
+	height: 515px;
+	padding: 20px;
+}
+
+.asideText h2 {
+	font-size: 1.6rem;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 5px;
+}
+
+.asideText span {
+	color:#BE7B34;
+}
+
+.footer {
+	border:1px solid #4D5357;
+	margin-top: 15px;
+	padding: 20px;
+	float:right;
+	height: 105px;
+}
+
+.footer h2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.7rem;
+}
+
+.footerBlock {
+	float:right;
+	padding: 20px;
+	padding-right: 0px;
+}
+
+.footerBlockText {
+	padding-left: 0px;
+}
+
+.footerBlockText p {
+	margin: 0px;
+	padding:0px;
+	font-size: 1.1rem;
+}
+
+.footerBlockTabCenter {
+	margin: -20px;
+}
+
+.footerBlockTabCenter h2{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: 0px;
+	padding:3px 5px;
+}	
+
+.left {
+	float: left;
+	border:1px solid #4D5357;
+	background: #CDE0F1;
+}
+
+
+
+.left div {
+	display: inline-block;
+	border:1px solid #4D5357;
+	width: 20px;
+	height: 20px;
+}
+
+.right {
+	float: right;
+	border:1px solid #4D5357;
+	background: #CDE0F1;
+}
+
+.footerBlockTabRight {
+	float:right;
+	padding: 0px;
+	padding-left:60px;
+	text-align: center;
+
+}
+
+.btn-default {
+	border:1px solid #4D5357;
+	background: #CDE0F1;
+}
