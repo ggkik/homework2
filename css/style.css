@@ -24,6 +24,7 @@ body {
 	background: #CDE0F1;
 	background: linear-gradient(to bottom right, #CDE0F1, #C4A1E8 );
 	border:1px solid #4D5357;
+	border-radius: 5px;
 }
 
 .headerText {
@@ -127,6 +128,7 @@ body {
 
 .aside {
 	border:1px solid #4D5357;
+	border-radius: 5px;
 	background: #CDE0F1;
 	background: linear-gradient(to left, #CDE0F1, #C4A1E8 );
 	float: left;
@@ -149,6 +151,7 @@ body {
 
 .asideText {
 	border:1px solid #4D5357;
+	border-radius: 5px;
 	background: #EDEDED;
 	height: 515px;
 	padding: 20px;
