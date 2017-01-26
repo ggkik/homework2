@@ -6,7 +6,7 @@ body {
 .wrapper {
 	width: 100%;
 	max-width: 1170px;
-	min-width: 320px;
+	min-width: 500px;
 	margin: 0 auto;
 	padding: 20px;
 	box-sizing: border-box;
@@ -14,11 +14,15 @@ body {
 
 
 .row {
-	max-width: 1128px;
+	
+	
+	
 }
+
 .header {
 	width: 100%;
 	background: #CDE0F1;
+	background: linear-gradient(to bottom right, #CDE0F1, #C4A1E8 );
 	border:1px solid #4D5357;
 }
 
@@ -47,12 +51,14 @@ body {
 	text-transform: uppercase;
 	color: #C56DCE;
 	background: #E6B8AF;
+	border-radius: 10px;
 	margin-top: 15px;
 	max-width: 730px;
 }
 
 .headerName h1 {
 	padding-bottom: 10px;
+	text-shadow: 2px 2px #ddd;
 }
 
 .content {
@@ -84,21 +90,45 @@ body {
 	
 }
 
+.tab a {
+	text-decoration: none;
+}
+
 .tab h2 {
 	font-weight:700;
+	text-shadow: 2px 2px #eff;
 }
 
 .tabLeft {
 	border:1px solid #4D5357;
+	border-radius: 5px;
+
 }
+
+
+.tabLeft:hover {
+	background: #CDE0F1;
+    color: #ffe;
+ }
 
 .tabRight {
 	border:1px solid #4D5357;
+	border-radius: 5px;
+
 }
+
+
+.tabRight:hover {
+	background: #CDE0F1;
+    color: #ffe;
+}
+
+
 
 .aside {
 	border:1px solid #4D5357;
 	background: #CDE0F1;
+	background: linear-gradient(to left, #CDE0F1, #C4A1E8 );
 	float: left;
 	padding:10px;
 	margin-top:30px;
@@ -169,6 +199,10 @@ body {
 	margin: -20px;
 }
 
+.footerBlockTabCenter a:hover {
+	color:#aaa;
+}
+
 .footerBlockTabCenter h2{
 	font-size: 1.2rem;
 	font-weight: 600;
@@ -200,7 +234,7 @@ body {
 .footerBlockTabRight {
 	float:right;
 	padding: 0px;
-	padding-left:60px;
+	padding-left:35px;
 	text-align: center;
 
 }
@@ -208,4 +242,10 @@ body {
 .btn-default {
 	border:1px solid #4D5357;
 	background: #CDE0F1;
+}
+
+
+
+@media screen and (min-width:1010px) and (max-width:1024px)  {
+	.headerName {width: 63.66666667%;}
 }
