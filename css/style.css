@@ -32,15 +32,17 @@ body {
 
 }
 
-.headerText p {
+.time li {
 	margin-bottom: 0px;
 	font-size: 1.3rem;
+	list-style-type: none;
 }
 
-.headerText h2 {
+.personal li {
 	font-size: 1.6rem;
 	margin-top: 0px;
 	margin-bottom: 2px;
+	list-style-type: none;
 }
 
 .headerText p:nth-child(2) {
@@ -83,10 +85,15 @@ body {
 	text-decoration: underline;
 }
 
+.contentText p {
+	font-size: 1.6rem;
+	margin:0px;
+	padding-bottom: 5px;
+}
+
 .tab {
-	position: absolute;
-	top:-5.5%;
-	left: 0%;
+	
+	margin-top: -45px;
 	text-align: center;
 	
 }
@@ -138,18 +145,18 @@ body {
 	height:570px; 
 }
 
-.asideTab {
+.users {
 	padding: 10px;
 }
 
-.asideTab h2 {
+.users h2 {
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin: 0px;
 	padding: 0px;
 }
 
-.asideText {
+.usersList {
 	border:1px solid #4D5357;
 	border-radius: 5px;
 	background: #EDEDED;
@@ -157,82 +164,84 @@ body {
 	padding: 20px;
 }
 
-.asideText h2 {
+.usersList a {
 	font-size: 1.6rem;
+	cursor: pointer;
 	margin: 0px;
 	padding: 0px;
 	padding-bottom: 5px;
 }
 
-.asideText span {
+.usersList span {
 	color:#BE7B34;
+	font-size: 1.6rem;
+}
+
+.usersList ul {
+	list-style-type: none;
+	padding: 0px;
 }
 
 .footer {
-	border:1px solid #4D5357;
+	
 	margin-top: 15px;
-	padding: 20px;
+	padding: 0px;
 	float:right;
 	height: 105px;
 }
 
-.footer h2 {
-	margin: 0px;
-	padding: 0px;
+.footer input {
+	border:1px solid #4D5357;
+	width: 100%;
+	max-width: 780px;
+	height: 105px;
 	font-size: 1.7rem;
 }
 
-.footerBlock {
+.info {
 	float:right;
 	padding: 20px;
 	padding-right: 0px;
 }
 
-.footerBlockText {
+.counter {
 	padding-left: 0px;
 }
 
-.footerBlockText p {
+.info ul {
+	list-style-type: none;
 	margin: 0px;
 	padding:0px;
 	font-size: 1.1rem;
 }
 
-.footerBlockTabCenter {
+.format {
 	margin: -20px;
 }
 
-.footerBlockTabCenter a:hover {
+.format a:hover {
 	color:#aaa;
 }
 
-.footerBlockTabCenter h2{
+.format h2{
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin: 0px;
 	padding:3px 5px;
 }	
 
-.left {
-	float: left;
-	border:1px solid #4D5357;
-	background: #CDE0F1;
-}
 
 
 
-.left div {
+
+.format div {
 	display: inline-block;
 	border:1px solid #4D5357;
 	width: 20px;
 	height: 20px;
 }
 
-.right {
-	float: right;
-	border:1px solid #4D5357;
-	background: #CDE0F1;
-}
+
 
 .footerBlockTabRight {
 	float:right;
@@ -247,8 +256,65 @@ body {
 	background: #CDE0F1;
 }
 
-
+//media screen
 
 @media screen and (min-width:1010px) and (max-width:1024px)  {
 	.headerName {width: 63.66666667%;}
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+	.contentText {padding-top: 20px;}
+}
+
+@media screen and (min-width:732px) and (max-width:767px) {
+	.tab h2{font-size: 1.4rem;}
+	.tab {margin-top : -42px;}
+	.contentText {padding-top: 20px;}
+}
+
+@media screen and (min-width:681px) and (max-width:731px) {
+	.tab h2{font-size: 1.3rem;}
+	.tab {margin-top : -42px;}
+	.contentText {padding-top: 20px;}
+}
+
+@media screen and (min-width:645px) and (max-width:680px) {
+	.tab h2{font-size: 1.2rem;}
+	.tab {margin-top : -41px;}
+	.contentText {padding-top: 20px;}
+	.format {width: 220px;}
+}
+
+@media screen and (min-width:627px) and (max-width:644px) {
+	.tab h2{font-size: 1.1rem;}
+	.tab {margin-top : -40px;}
+	.contentText {padding-top: 20px;}
+	.format {width: 220px;}
+	.footerBlockTabRight {padding-left:30px;}
+}
+
+@media screen and (min-width:585px) and (max-width:626px) {
+	.tab h2{font-size: 1.1rem;}
+	.tab {margin-top : -40px; width: 340px;}
+	.contentText {padding-top: 20px;}
+	.format {width: 220px;}
+	.footerBlockTabRight {padding-left:26px;}
+}
+
+@media screen and (min-width:575px) and (max-width:584px) {
+	.tab h2{font-size: 1.1rem;}
+	.tab {margin-top : -40px; width: 340px;}
+	.contentText {padding-top: 20px;}
+	.format {width: 220px;}
+	.footerBlockTabRight {padding-left:22px;}
+}
+
+@media screen and (min-width:560px) and (max-width:574px) {
+	.tab h2{font-size: 1.1rem;}
+	.tab {margin-top : -40px; width: 340px;}
+	.tabLeft {width: 150px;}
+	.tabRight {padding-left: 5px; width: 145px;}
+	.contentText {padding-top: 20px;}
+	.format {width: 220px;}
+	.footerBlockTabRight {padding-left:20px;}
 }

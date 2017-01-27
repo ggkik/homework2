@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-
+  <script type="text/javascript" src = js/jquery-3.1.1.min.js></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,10 +24,14 @@
           <div class="row">
             <div class="header col-xs-12 col-md-12 col-lg-12">
               <div class="headerText col-xs-12 col-md-4 col-lg-4">
-                <p>You are online for: 1h 30m</p>
-                <p>Your colal time is: 10:45</p>
-                <h2><a href="#">Edit personal info</a></h2>
-                <h2><a href="#">Pryvate message (3)</a></h2>
+                <ul class = "time">
+                  <li>You are online for: 1h 30m</li>
+                  <li>Your local time is: 10:45</li>
+                </ul>
+                <ul class = "personal">
+                  <li><a href="#">Edit pesonal info</a></li>
+                  <li><a href="#">Private messages (3)</a></li>
+                </ul> 
               </div>
               <div class="headerName col-xs-12 col-md-8 col-lg-8 text-center">
                 <h1>You chat name</h1>
@@ -39,58 +43,50 @@
           <div class="row">
             <div class="content col-xs-8 col-md-8 col-lg-8">
               <div class="tab col xs-12 col-md-12 col-lg-12">
-                <div class="tabLeft col-xs-5 col-md-5 col-5">
+                <div class="tabLeft col-xs-6 col-md-6 col-4">
                   <h2><a href="#">Main chat</a></h2>
                 </div>
-                <div class="tabRight col-xs-5 col-md-5 col-5">
+                <div class="tabRight col-xs-6 col-md-6 col-4">
                   <h2><a href="#">Chat with Alison (2) [x]</a></h2>
                 </div>
               </div>
               <div class="contentText col-xs-12 col-md-12 col-lg-12">
-                <h2><span>John Snow: </span>Hi, how is the weather there? </h2>
-                <h2><span>Alison Black: </span>It's snowy, temperature here is 10 degrees below zero celsius.</h2>
-                <h2><span>John Snow: </span>Wuh, it seems winter has come indeed...</h2>
+                <p><span>John Snow: </span>Hi, how is the weather there? </p>
+                <p><span>Alison Black: </span>It's snowy, temperature here is 10 degrees below zero celsius.</p>
+                <h2><span>John Snow: </span>Wuh, it seems winter has come indeed...</p>
               </div>
             </div>
             <div class="aside col-xs-4 col-md-4 col-lg-4">
-              <div class="asideTab">
-                <h2>Online</h2>
+              <div class="users">
+                <h2>Online: 4</h2>
               </div>
-              <div class="asideText">
-                <h2>John Snow</h2>
-                <h2>Andersen Simpson</h2>
-                <h2>Alison Black</h2>
-                <h2><span>Shaha Stuart</span></h2>
+              <div class="usersList">
+                <ul>
+                  <li><a>John Snow</a></li>
+                  <li><a>Andersen Simpson</a></li>
+                  <li><a>Alison Black</a></li>
+                  <li><span>Shaha Stuart</span></li>
+                </ul>                      
               </div>
             </div>
             <div class="footer col-xs-8 col-md-8 col-lg-8">
-              <h2>Hello everyone, how it's going?</h2>
+              <input class="form-control" rows="3" placeholder="Hello everyone, how it's going?">  </input>
             </div>
-            <div class="footerBlock col-xs-12 col-md-8 col-lg-8">
-              <div class="footerBlockText col-xs-4 col-md-4 col-lg-3">
-                <p>31 characters entered</p>
-                <p>25 letters entered</p>
-                <p>4 whitespace characters entered</p>
-                <p>2 punctuation marks entered</p>
-              </div> 
-              <div class="footerBlockTabCenter col-xs-4 col-md-4 col-lg-3">
-                <div class="left">
-                  <div>
-                    <h2><a href="#">B</a></h2>
-                  </div>
-                   <div>
-                    <h2><a href="#">/</a></h2>
-                  </div>
-                   <div>
-                    <h2><u><a href="#">U</a></u></h2>
-                  </div>
-                </div>
-                <div class="right">
-                  <div>
-                    <h2><a href="#">Link</a></h2>
-                  </div>
-                </div>
-              </div>
+            <div class="info col-xs-12 col-md-8 col-lg-8">
+              <div class="counter col-xs-4 col-md-4 col-lg-3">
+                <ul class="counter">
+                  <li>31 characters entered</li>
+                  <li>25 letters entered</li>
+                  <li>4 whitespase characters entered</li>
+                  <li>2 punctuation marks entered</li>
+               </ul>
+              </div>      
+              <div class="format col-xs-4 col-md-4 col-lg-4">
+                <button type="button" class="btn btn-default active" onclick="bold()">B</button>
+                <button type="button" class="btn btn-default ">/</button>
+                <button type="button" class="btn btn-default ">U</button>
+                <button type="button" class="btn btn-default ">Link</button>
+              </div>                                                                      
               <div class="footerBlockTabRight col-xs-3 col-md-3 col-lg-3">
                 <button type="submit" class="btn btn-default">Send message</button>
               </div>
@@ -102,5 +98,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
   </body>
 </html>
