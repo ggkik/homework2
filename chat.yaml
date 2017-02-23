@@ -1,0 +1,106 @@
+swagger: '2.0'
+info:
+  title: Andersen Chat
+  description: Чат
+  version: "1.0.0"
+host: ---
+schemes:
+  - http
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /messages:
+    get:
+      summary: Получить сообщения чата
+      description: |
+        Получить сообщения чата за определенный период
+      parameters:
+        - name: start_datetime
+          in: query
+          description: Дата и время начала отрезка сообзений
+          required: false
+          type: string
+          format: date-time
+        - name: end_datetime
+          in: query
+          description: Дата и время конца отрезка сообзений
+          required: false
+          type: string
+          format: date-time
+      tags:
+        - Messages
+      responses:
+        200:
+          description: Массив объектов сообщений
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Message'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /users:
+    get:
+      summary: Список пользователей
+      description: |
+        Получение списка пользователей
+      parameters:
+        - name: chat
+          in: query
+          description: Идентификатор чата (имя чата), идентификатор основного чата - "main"
+          required: true
+          type: string
+      tags:
+        - Users
+      responses:
+        200:
+          description: Список пользователей
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Message:
+    type: object
+    properties:
+      user_id:
+        type: string
+        description: Идентификатор пользователя 
+      message:
+        type: string
+        description: Текст сообщения
+      datetime:
+        type: string
+        format: date-time
+        description: Дата и время когда сообщение было отправлено
+  User:
+    type: object
+    properties:
+      user_id:
+        type: string
+        description: Идентификатор пользователя
+      username:
+        type: string
+        description: Имя пользователя
+      status:
+        type: string
+        enum:
+          - active
+          - away
+        description: Display name of product.
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

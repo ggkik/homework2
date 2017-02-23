@@ -42,18 +42,27 @@
         <div class="container">
           <div class="row">
             <div class="content col-xs-8 col-md-8 col-lg-8">
-              <div class="tab col xs-12 col-md-12 col-lg-12">
-                <div class="tabLeft col-xs-5 col-md-5 col-5">
-                  <h2><a href="#">Main chat</a></h2>
-                </div>
-                <div class="tabRight col-xs-5 col-md-5 col-5">
-                  <h2><a href="#">Chat with Alison (2) [x]</a></h2>
-                </div>
-              </div>
-              <div class="contentText col-xs-12 col-md-12 col-lg-12">
-                <p><span>John Snow: </span>Hi, how is the weather there? </p>
-                <p><span>Alison Black: </span>It's snowy, temperature here is 10 degrees below zero celsius.</p>
-                <h2><span>John Snow: </span>Wuh, it seems winter has come indeed...</p>
+              <div class="tabs">
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1" title="Вкладка 1">Main chat</label>
+
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2" title="Вкладка 2">Chat with <b>Alison Black (2)[x]</b></label>
+
+                <section id="content-tab1">
+                  <p><b>Alison Black:</b> Hello!</p>
+                      <p><b>Sasha Stuard:</b> Who are you?</p>
+                      <p><b>Alison Black: </b> I dont know...</p>
+                      <p><b>Jogn Snow: </b> Winter is coming</p>
+                </section>
+                <section id="content-tab2">
+                  <p>
+                    <p><b>Alison Black:</b> Hello!</p>
+                  </p>
+                </section>
+               </div>
+                <div class="chatInput col-xs-12 col-md-12 col-lg-12">
+                  <textarea class="form-control" rows="3" placeholder="Input your message here"></textarea>
               </div>
             </div>
             <div class="aside col-xs-4 col-md-4 col-lg-4">
@@ -69,9 +78,7 @@
                 </ul>                      
               </div>
             </div>
-            <div class="chatInput col-xs-8 col-md-8 col-lg-8">
-              <input class="form-control" rows="3" placeholder="Hello everyone, how it's going?">  </input>
-            </div>
+           
             <div class="info col-xs-12 col-md-8 col-lg-8">
               <div class="counter col-xs-4 col-md-4 col-lg-3">
                 <ul class="counter">
@@ -82,13 +89,13 @@
                </ul>
               </div>      
               <div class="format col-xs-4 col-md-4 col-lg-4">
-               <button type="button" class="btn btn-default active" onclick="bolding()">B</button>
-               <button type="button" class="btn btn-default " onclick="italic()">I</button>
-              <button type="button" class="btn btn-default " onclick="uppercase()">U</button>
-               <button type="button" class="btn btn-default " onclick="link()">Link</button>
+                <button type="button" class="btn btn-default active bldbutn" >B</button>
+                <button type="button" class="btn btn-default ibutn " >I</button>
+                <button type="button" class="btn btn-default ubutn" >U</button>
+                <button type="button" class="btn btn-default lnkbutn" >Link</button>
               </div>                                                                      
-              <div class="footerBlockTabRight col-xs-3 col-md-3 col-lg-3">
-               <button type="button" class="btn btn-lg btn-primary" onclick="sendMessage()">Send message</button>
+              <div class="butn col-xs-3 col-md-3 col-lg-3">
+                <button type="button" class="btn btn-lg btn-primary" >Send message</button>
               </div>
             </div>
           </div>

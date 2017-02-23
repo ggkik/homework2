@@ -66,72 +66,218 @@ body {
 	text-shadow: 2px 2px #ddd;
 }
 
-.content {
-	border:1px solid #4D5357;
-	margin-top: 30px;
-	padding: 20px;
-	float: right;
-	height: 450px;
-	position: relative;
+.right {
+  margin-top: 30px;
+  float: right;
+  height: 600px; }
+  .right .chatList {
+    height: 440px;
+    border: 1px solid lightgray; }
+  .right .chatInput {
+    height: 100px;
+    margin-top: 20px; }
+    .right .chatInput input {
+      padding-bottom: 68px;
+      height: 100%; }
+
+
+/************************TABS*****************/
+/* контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 0px;
+  margin: 0 auto;
+}
+/* Стили для Sections */
+.tabs>section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.tabs>section>p {
+  margin: 0 0 5px;
+  line-height: 1.5;
+  color: #383838;
+
+  /* анимация */
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
-.content h2 {
-	font-size: 1.6rem;
-	margin:0px;
-	padding-bottom: 5px;
+/* Описание анимации fadeIn */
+ 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* hide checkboxes */
+.tabs>input {
+  display: none;
+  position: absolute;
+}
+
+/* label styles */
+.tabs>label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 0px solid #ddd;
+  border-width: 1px 1px 1px 1px;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+}
+
+.tabs>label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+  color: #555;
+  border-top: 1px solid #b5d1e8;
+  border-bottom: 1px solid #fff;
+  background: aliceblue;
 
 }
 
-.content span {
-	font-weight: 600;
-	text-decoration: underline;
+#content-tab1, #content-tab2, #content-tab3, #content-tab4 {
+  height: 426px;
+  max-height: 426px;
 }
 
-.contentText p {
-	font-size: 1.6rem;
-	margin:0px;
-	padding-bottom: 5px;
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+  display: block;
+}
+/* Убираем текст с переключателей 
+* и оставляем иконки на малых экранах
+*/
+ 
+@media screen and (max-width: 680px) {
+  .tabs>label {
+    font-size: 0;
+  }
+  .tabs>label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+/* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .tabs>label {
+    padding: 15px;
+  }
 }
 
-.tab {
-	
-	margin-top: -45px;
-	text-align: center;
-	
+/************************END TABS*****************/
+
+
+.info {
+  height: 110px;
+  margin-right: 15px;
+  float: right; }
+  .info ul.counter {
+    list-style-type: none;
+    padding: 0px;
+    padding-top: 12px; }
+    .info ul.counter li {
+      font-size: 12px; }
+  .info .butn {
+    padding-top: 12px; }
+
+::-webkit-input-placeholder {
+  color: #c0392b; }
+
+@media screen and (max-width: 850px) {
+    .logo {
+      display: none;
+    }
+    .headerName h1{
+      font-size: 70px;
+      margin-left: 20px;
+      padding: 0;
+    }
+    .users{
+      padding: 0;
+    }
+}    
+@media screen and (max-width: 830px) {
+  .nav-pills a{
+    font-size: 10px;
+  }
+  .headerName h1{
+      font-size: 60px;
+    }
+   .headerInfo{
+    width: 40%;
+   } 
 }
 
-.tab a {
-	text-decoration: none;
+@media screen and (max-width: 720px) {
+  .nav-pills a{
+    font-size: 9px;
+  }
+   .headerName h1{
+      font-size: 42px;
+      margin-top: 56px;
+    }
+    .users{
+      padding: 0;
+    }
+    .headerInfo{
+    width: 50%;
+   } 
+   .info .butn {
+    padding-top: 0;
+  }
+  .right .chatInput input {
+    height: 80%;
+  }
+  .format button{
+    margin-right: 55px;
+  }
+  .butn button{
+    margin-right: -10px;
+    margin-left: -70px;
+    margin-top: 34px;
+  }
 }
 
-.tab h2 {
-	font-weight:700;
-	text-shadow: 2px 2px #eff;
-}
 
-.tabLeft {
-	border:1px solid #4D5357;
-	border-radius: 5px;
-
+@media screen and (max-width: 600px) {
+  .right li{
+    float: none;
+  }
 }
 
 
-.tabLeft:hover {
-	background: #CDE0F1;
-    color: #ffe;
- }
 
-.tabRight {
-	border:1px solid #4D5357;
-	border-radius: 5px;
-
-}
-
-
-.tabRight:hover {
-	background: #CDE0F1;
-    color: #ffe;
-}
+/*# sourceMappingURL=styles.css.map */
 
 
 
