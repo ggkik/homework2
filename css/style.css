@@ -112,34 +112,9 @@ body {
   margin: 0 0 5px;
   line-height: 1.5;
   color: #383838;
-
- 
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
 }
 
 
- 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 
 .tabs>input {
@@ -184,7 +159,7 @@ body {
 #tab1:checked~#content-tab1, #tab2:checked~#content-tab2 {
   display: block;
 }
-#content-tab1, #content-tab2, #content-tab3, #content-tab4 {
+#content-tab1, #content-tab2,  {
   height: 426px;
   max-height: 426px;
 }
