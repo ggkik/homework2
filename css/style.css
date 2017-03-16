@@ -61,13 +61,13 @@ body {
 	border-radius: 10px;
 	margin-top: 15px;
 	max-width: 730px;
-	height: 145px;
+	height: 100px;
 }
 
 .headerName h1 {
 	font-size: 4rem;
-	padding-top: 30px;
 	text-shadow: 2px 2px #ddd;
+	padding-top: 10px;
 }
 
 .content {
@@ -99,6 +99,10 @@ body {
 	font-size: 1.6rem;
 	margin:0px;
 	padding-bottom: 5px;
+}
+
+section{
+	overflow-y: scroll;
 }
 
 .tabs>section {
@@ -198,8 +202,9 @@ body {
 	border:1px solid #4D5357;
 	border-radius: 5px;
 	background: #EDEDED;
-	height: 515px;
+	height: 460px;
 	padding: 20px;
+	overflow-y: scroll; 
 }
 
 .usersList a {
